@@ -158,4 +158,10 @@
   background-color: #f4f4f4;
 }
 
-
+.circle {
+  background-color: #f2eeea;
+  height: 1000px;
+  width: 1000px;
+  border-radius: 100%;
+  isolation: isolate;
+}
