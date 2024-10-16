@@ -1,0 +1,39 @@
+/* Rotating effect */
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotating_text {
+    position: absolute;
+    right: 0;
+    width: 41.25rem; /* 660px */
+    height: 41.25rem;
+    padding: 4rem; /* Adjust padding to fit design */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circleText {
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite; /* Smooth infinite rotation */
+  }
+  
+  .circleText__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .circleText__text {
+    font-size: 2.1rem; /* Adjust the font size */
+    fill: black;
+    letter-spacing: 5px; /* Adjust spacing for better fitting */
+    font-weight: bolder;
+  }
+  
