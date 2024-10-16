@@ -1,39 +1,159 @@
 /* Rotating effect */
 @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .rotating_text {
-    position: absolute;
-    right: 0;
-    width: 41.25rem; /* 660px */
-    height: 41.25rem;
-    padding: 4rem; /* Adjust padding to fit design */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .circleText {
-    width: 100%;
-    height: 100%;
-    animation: rotate 20s linear infinite; /* Smooth infinite rotation */
+}
+
+.rotating_text {
+  position: absolute;
+  right: 0;
+  width: 41.25rem; /* 660px */
+  height: 41.25rem;
+  padding: 4rem; /* Adjust padding to fit design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleText {
+  width: 100%;
+  height: 100%;
+  animation: rotate 20s linear infinite; /* Smooth infinite rotation */
+}
+
+.circleText__circle {
+  fill: none;
+  stroke: none;
+}
+
+.circleText__text {
+  font-size: 2.1rem; /* Adjust the font size */
+  fill: black;
+  letter-spacing: 5px; /* Adjust spacing for better fitting */
+  font-weight: bolder;
+}
+
+/* slider */
+
+.fifth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 0 35px;
+  /* background-color: #6369D1; */
+}
+
+.wrapper {
+  max-width: 100vw;
+  width: 100%;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  /* height: 342px; */
+  list-style: none;
+  border-radius: 8px;
+  display: flex;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+.card .img {
+
+  width: 310px;
+  height: 380px;
+}
+
+.card .img img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.about-main {
+  height: calc(100vh - header - footer);
+}
+
+.down-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 3) - 10px);
   }
-  
-  .circleText__circle {
-    fill: none;
-    stroke: none;
+
+  .card span {
+    font-size: 0.8em;
   }
-  
-  .circleText__text {
-    font-size: 2.1rem; /* Adjust the font size */
-    fill: black;
-    letter-spacing: 5px; /* Adjust spacing for better fitting */
-    font-weight: bolder;
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 7px);
   }
-  
+
+  .carousel .card {
+    font-size: 4.5vw;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+      grid-auto-columns: 100%;
+  }
+
+  .carousel .card {
+      font-size: 4.5vw !important;
+  }
+
+}
