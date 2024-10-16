@@ -18,16 +18,16 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              fontFamily: {
-                "roboto": ['Roboto', 'sans-serif'],
-              },
-            }
-          }
-        }
-      </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
   <body class="bg-gray-100 font-roboto">
@@ -99,22 +99,93 @@
       </div>
 
       <!-- line section -->
-      <div class="mt-8 flex items-center justify-center max-w-screen-md mx-auto">
+      <div
+        class="mt-8 flex items-center justify-center max-w-screen-md mx-auto"
+      >
         <div class="flex-grow border-t border-gray-300"></div>
-      
+
         <div class="svg_icon mx-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4v16m8-8H4"
+            />
           </svg>
         </div>
-      
+
         <div class="flex-grow border-t border-gray-300"></div>
       </div>
-      
+
       <div class="text-center mt-4 text-gray-700">
-        <p><span class="text-rose-950">Free shipping nationwide</span> for purchases over 10,000 yen</p>
-        <p class="text-sm text-gray-700">(excluding Hokkaido, Tohoku, and Okinawa)</p>
+        <p>
+          <span class="text-rose-950">Free shipping nationwide</span> for
+          purchases over 10,000 yen
+        </p>
+        <p class="text-sm text-gray-700">
+          (excluding Hokkaido, Tohoku, and Okinawa)
+        </p>
       </div>
+
+      <!-- images section -->
+      <section class="w-full relative mt-32">
+        <div class="content">
+          <div class="image absolute left-0 top-0 w-[13rem]">
+            <img
+              src="./assets/images/hero_section_1.webp"
+              class="w-full"
+              alt=""
+            />
+          </div>
+          <div class="absolute left-[25%]">
+            <h2 class="text-2xl font-semibold text-gray-700 mt-4">
+              Making good things even better.
+            </h2>
+            <div class="description w-full relative pl-24 py-24">
+              <div class="mt-9 text-gray-600">
+                <p>Nostalgic flavors that remind you of those times, and</p>
+                <p>soothing flavors that never change.</p>
+              </div>
+              <div class="mt-9 text-gray-600">
+                <p>MODERNCA combines modern trends</p>
+                <p>
+                  with flavors that have long been loved in Tosa, a region where
+                  the blue of the ocean and the green of the mountains intersect
+                  .
+                </p>
+              </div>
+              <div class="mt-9 text-gray-600">
+                <p>Please enjoy this new deliciousness that</p>
+                <p>
+                  has been reborn as something even better, connecting the past
+                  and the future .
+                </p>
+              </div>
+              <div class="image absolute -right-[5%] top-[35%] w-[38rem] z-[-999]">
+                <img
+                  src="./assets/images/hero_section_2.webp"
+                  class="w-full"
+                  alt=""
+                />
+              </div>
+              <div class="image absolute right-[46%] top-[100%] w-[25rem] z-[-998]">
+                <img
+                  src="./assets/images/hero_section_3.webp"
+                  class="w-full"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./scripts/main.js"></script>
