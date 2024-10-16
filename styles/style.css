@@ -103,7 +103,6 @@
 }
 
 .card .img {
-
   width: 310px;
   height: 380px;
 }
@@ -143,17 +142,20 @@
   .carousel .card {
     font-size: 4.5vw;
   }
-
 }
-
 
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
-      grid-auto-columns: 100%;
+    grid-auto-columns: 100%;
   }
 
   .carousel .card {
-      font-size: 4.5vw !important;
+    font-size: 4.5vw !important;
   }
-
 }
+
+.footer {
+  background-color: #f4f4f4;
+}
+
+
