@@ -6,14 +6,31 @@
     <title>Modernca</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <script
       src="https://kit.fontawesome.com/d603d59c66.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                "roboto": ['Roboto', 'sans-serif'],
+              },
+            }
+          }
+        }
+      </script>
   </head>
 
-  <body class="bg-gray-50">
+  <body class="bg-gray-100 font-roboto">
     <header class="header max-w-screen-xl mx-auto">
       <nav class="w-full flex justify-between items-center px-4 py-6">
         <h1 class="text-xl font-bold">MODERNCA</h1>
@@ -33,7 +50,7 @@
           </li>
         </ul>
       </nav>
-    </header> 
+    </header>
 
     <main>
       <div
@@ -62,7 +79,7 @@
           />
         </div>
         <!-- right -->
-        <div class="flex flex-col justify-between  p-10 pb-16  lg:w-1/5">
+        <div class="flex flex-col justify-between p-10 pb-16 lg:w-1/5">
           <div class="space-y-8">
             <div
               class="transform lg:rotate-90 origin-left lg:origin-center text-gray-900 text-lg lg:mt-16"
@@ -80,6 +97,28 @@
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
         </div>
+      </div>
+
+      <!-- line section -->
+      <div class="mt-8 flex items-center justify-center max-w-screen-md mx-auto">
+        <!-- Horizontal line (left) -->
+        <div class="flex-grow border-t border-gray-300"></div>
+      
+        <!-- Icon in the middle -->
+        <div class="svg_icon mx-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </div>
+      
+        <!-- Horizontal line (right) -->
+        <div class="flex-grow border-t border-gray-300"></div>
+      </div>
+      
+      <!-- Text Below the line and icon -->
+      <div class="text-center mt-4 text-gray-700">
+        <p><span class="text-rose-950">Free shipping nationwide</span> for purchases over 10,000 yen</p>
+        <p class="text-sm text-gray-700">(excluding Hokkaido, Tohoku, and Okinawa)</p>
       </div>
     </main>
 
