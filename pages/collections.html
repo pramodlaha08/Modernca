@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List | Modernca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d603d59c66.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body class="bg-gray-50 font-roboto">
+    <header class="header max-w-screen-xl mx-auto">
+      <nav class="w-full flex justify-between items-center px-4 py-6">
+        <h1 class="text-xl font-bold">MODERNCA</h1>
+        <ul class="flex items-center gap-6 text-lg font-regular opacity-90">
+          <li><a href="/collections">Product List</a></li>
+          <li><a href="">Gift items</a></li>
+          <li><a href="">Story</a></li>
+          <li><a href="">Inquiry</a></li>
+          <li>
+            <a href=""><i class="fa-solid fa-question"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-regular fa-user"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="max-w-screen-xl mx-auto p-4">
+        <div class="route flex items-center gap-1 text-gray-700 text-sm">
+            <p>Home</p>
+            <i class="fa-solid fa-arrow-right text-gray-500"></i>
+            <p>All Products</p>
+        </div>
+        <section class="mt-36">
+           <div class="flex justify-center items-center text-9xl">
+            All Items
+           </div>
+        </section>
+    </main>
+
+    <footer class="footer w-full mt-10 pb-32">
+      <div class="max-w-screen-xl mx-auto py-16 px-4">
+        <div class="top_foot w-full flex justify-center">
+          <div
+            class="flex gap-6 bg-zinc-50 w-fit px-8 py-4 rounded-full items-center"
+          >
+            <p>Check the latest information on official SNS</p>
+            <i class="fa-brands fa-instagram text-2xl"></i>
+          </div>
+        </div>
+        <div class="mt-32">
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="text-left">
+              <h2 class="text-xl text-gray-500 font-semibold mb-4">
+                Product List
+              </h2>
+              <ul class="space-y-2">
+                <li class="text-gray-700">Sweet potato chips</li>
+                <li class="text-gray-700">Coffee</li>
+                <li class="text-gray-700">Chocolate</li>
+              </ul>
+            </div>
+
+            <div class="text-left">
+              <h2 class="text-xl text-gray-500 font-semibold mb-4">
+                Gift Items
+              </h2>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-700">Story</a></li>
+              </ul>
+            </div>
+
+            <div class="text-left lg:col-span-2 flex flex-col gap-3">
+              <h2 class="text-xl text-gray-500 font-semibold mb-4">Store</h2>
+              <p class="text-gray-700 mb-2">
+                〒781-0262 Kochi Prefecture, Kochi City, Urado 6 Katsurahama Sea
+                Terrace Shio-no-Mune
+              </p>
+              <button
+                class="border border-gray-700 text-sm text-gray-700 px-5 py-1 rounded-full w-fit"
+              >
+                MAP
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-44 grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+          <div
+            class="lg:col-span-3 flex justify-center md:justify-start space-x-4 text-gray-700"
+          >
+            <a href="#" class="hover:underline">User Guide</a>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline"
+              >Description based on the Specified Commercial Transactions Act</a
+            >
+          </div>
+
+          <div class="flex justify-center md:justify-end text-gray-700 text-sm">
+            <p>
+              &copy; 2023 MODERNCA produced by
+              <a href="#" class="underline">LIARIMAYA</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__last relative w-full h-[15rem] relative">
+      <img
+        src="../assets/images/footer_bg.jpg"
+        alt="MODERNCA"
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute top-[25%] left-[25%] w-1/2">
+        <img
+          src="../assets/images/footer__transparent.webp"
+          alt="MODERNCA"
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>
